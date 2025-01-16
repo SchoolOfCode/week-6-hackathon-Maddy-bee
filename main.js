@@ -18,7 +18,7 @@
 
 
 
-
+// aiming for a 7 or 8 kata 
 
 
 
@@ -26,11 +26,7 @@
 
 
 export function findTheTraitor(players){
-    for (let i = 0; i < players.length; i++) {
-        if (players[i].length === 6) {
-          return players[i];
-        }
-    }
+    return players.find(player => player.length === 6 && player.slice(1, 5).includes('T'));
 }
 
 
