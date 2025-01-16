@@ -73,8 +73,16 @@ test("Selects player with a 6 character name and a 'T' in the middle", () => {
 //same test case 
 // different message 'No traitor found' 
 
+// on review, I found it could pass with just the T rule, so I added a new throw error for a case where the t was there, but the length didn't match 
+
+
+
+
 test("Every player is faithful", () => {
     const players5 = ['David', 'Monika', 'Maddy'];
     expect(() => findTheTraitor(players5)).toThrowError('No traitor found');
+
+    const players6 = ['Freddy', 'James', 'Maddy', 'MarTina'];
+    expect(() => findTheTraitor(players6)).toThrowError('No traitor found');
 });
 

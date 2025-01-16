@@ -21,10 +21,10 @@
 
 
 // aiming for a 7 or 8 kata 
-
-
-
-
+// 
+//
+//
+//
 
 
 export function findTheTraitor(players){
@@ -32,7 +32,7 @@ export function findTheTraitor(players){
    if (!traitor){
     throw new Error ('No traitor found');
  }
-  return traitor    
+  return traitor;    
 };
 
 
