@@ -83,3 +83,36 @@ test("Selects player with a 6 character name and a 'T' in the middle", () => {
     const players3 = ['HarTry', 'GeorTgia', 'Linda', 'Minah', 'Markus'];
     expect(findTheTraitor(players3)).toBe('HarTry');  
   });
+
+
+export function findTheTraitor(players){
+    const traitor = players.find(player => player.length === 6 && player.slice(1, 5).includes('T'));
+    return traitor || 'All players are faithful';
+};
+
+
+test("Every player is faithful", () => {
+    const players4 = ['David', 'Monika', 'Maddy'];
+    expect(findTheTraitor(players4)).toBe('All players are faithful')
+
+});
+
+
+export function findTheTraitor(players){
+    const traitor = players.find(player => player.length === 6 && player.slice(1, 5).includes('T'));
+
+    if (!traitor){
+        throw new Error ('No traitor found');
+    }
+    return traitor;
+};
+
+//test 3.v2
+// if there is no traitor, throw an error instead
+//same test case 
+// different message 'No traitor found' 
+
+test("Every player is faithful", () => {
+    const players5 = ['David', 'Monika', 'Maddy'];
+    expect(() => findTheTraitor(players5)).toThrowError('No traitor found');
+});

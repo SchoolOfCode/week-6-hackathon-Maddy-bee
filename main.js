@@ -13,9 +13,11 @@
 
 
 // MVP 3
-// the traitor's name is a palindrome 
+// throw an error 
 
-
+//   if (!traitor) {
+//         throw new Error('No traitor found');
+//     }
 
 
 // aiming for a 7 or 8 kata 
@@ -26,7 +28,11 @@
 
 
 export function findTheTraitor(players){
-    return players.find(player => player.length === 6 && player.slice(1, 5).includes('T'));
-}
+    const traitor = players.find(player => player.length === 6 && player.slice(1, 5).includes('T'));
+   if (!traitor){
+    throw new Error ('No traitor found');
+ }
+  return traitor    
+};
 
 

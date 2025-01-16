@@ -37,16 +37,13 @@ import {
 
 // must return undefined? 
 
-
-// The traitors have a capitol T hidden in their name to mark them out 
-// either tell them what letter it is or not, just that it's a capitol
-// it is the 6 including the T 
+// Test 2 
+// The traitors have a capitol T hidden in their name to mark them out e.g. MinTah
+// Test cases
 // One T and one 6, Two Ts and one 6, two 6's and one T
-// test cases
-// scenarios a case with just one with a capitol T in the middle 
-// multiple with capitol T's in the middle, but different lengths
-// 
-// MinTah
+
+
+
 
 
 test("Selects player with a 6 character name and a 'T' in the middle", () => {
@@ -59,4 +56,25 @@ test("Selects player with a 6 character name and a 'T' in the middle", () => {
     const players3 = ['HarTry', 'GeorTgia', 'Linda', 'Minah', 'Markus'];
     expect(findTheTraitor(players3)).toBe('HarTry');  
   });
+
+
+// test 3.v1
+// test case needs to have no traitors present 
+
+// test("Every player is faithful", () => {
+//     const players4 = ['David', 'Monika', 'Maddy'];
+//     expect(findTheTraitor(players4)).toBe('All players are faithful')
+
+// });
+
+
+//test 3.v2
+// if there is no traitor, throw an error instead
+//same test case 
+// different message 'No traitor found' 
+
+test("Every player is faithful", () => {
+    const players5 = ['David', 'Monika', 'Maddy'];
+    expect(() => findTheTraitor(players5)).toThrowError('No traitor found');
+});
 
