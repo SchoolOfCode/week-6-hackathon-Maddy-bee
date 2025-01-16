@@ -3,8 +3,6 @@
 
 // There is a list of names in an array for you to choose from 
 
-// The traitor is the person with 6 characters in their name 
-
 // select the person's name from the array 
 
 // MVP 2
@@ -16,7 +14,7 @@
 
 
 export function findTheTraitor(players){
-    const traitor = players.find(player => player.length === 6 && player.slice(1, 5).includes('T'));
+    const traitor = players.find(player => player.slice(1, -1).includes('T'));
    if (!traitor){
     throw new Error ('No traitor found');
  }
