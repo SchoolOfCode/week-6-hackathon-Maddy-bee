@@ -11,20 +11,8 @@
 
 // The traitor has a capitol T in the middle of their name
 
+// And it throws an error if it doesn't 
 
-// MVP 3
-// throw an error 
-
-//   if (!traitor) {
-//         throw new Error('No traitor found');
-//     }
-
-
-// aiming for a 7 or 8 kata 
-// 
-//
-//
-//
 
 
 export function findTheTraitor(players){
