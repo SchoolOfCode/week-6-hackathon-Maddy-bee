@@ -1,5 +1,42 @@
 Put your plan, story, and any supporting material here, you could use the help of a readme markdown generator such as [readme.so](https://readme.so/)
 
+
+Story:
+
+
+
+Plan:
+
+
+
+Tests:
+
+
+Function:
+
+
+Outcome:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //MVP 1
 // Faithful, you need to find the traitor in your midst. 
 

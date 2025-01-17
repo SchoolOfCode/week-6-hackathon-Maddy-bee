@@ -1,3 +1,5 @@
+// *  Before you start this task, don't forget to use command 'npm install'. *
+
 
 // Faithful, you need to find the traitor in your midst. 
 
@@ -7,9 +9,10 @@
 
 
 // An Example would be:   
+
 // const players = [ 'davidL', 'monika', 'madTdy']
 
-// Would have the answer of 'madTdy'
+// Would have the answer of 'madTdy' .
 
 // If you have already banished all of the traitors, throw the error 'No traitor found' .
 
@@ -17,7 +20,7 @@
 
 
 export function findTheTraitor(players){
-
+    // Your answer goes here
 };
 
 
