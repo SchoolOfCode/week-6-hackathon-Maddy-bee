@@ -5,20 +5,22 @@
 
 // select the person's name from the array 
 
-// MVP 2
+// MVP 2   
 
 // The traitor has a capitol T in the middle of their name
 
 // And it throws an error if it doesn't 
 
 
-
 export function findTheTraitor(players){
-    const traitor = players.find(player => player.slice(1, -1).includes('T'));
-   if (!traitor){
-    throw new Error ('No traitor found');
- }
-  return traitor;    
+  for (const player of players) {
+    const parts = player.split('T');
+    if (parts.length === 2 && player.indexOf('T')> 0 && player.indexOf('T') < player.length - 1 ) {
+      return player;
+    }
+  }
+  throw new Error('No traitor found');
 };
+
 
 
