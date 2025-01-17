@@ -51,7 +51,7 @@ test("No traitors are left", () => {
     expect(() => findTheTraitor(players9)).toThrowError('No traitor found');
 
     const players10 = ['Chtris', 'Anna-Marie', 'Faisal' ];
-    expect(() => findTheTraitor(players9)).toThrowError('No traitor found');
+    expect(() => findTheTraitor(players10)).toThrowError('No traitor found');
 
 });
 

@@ -16,12 +16,22 @@
 
 // If you have already banished all of the traitors, throw the error 'No traitor found' .
 
-// Happy hunting!
+// Happy hunting!  
 
 
 export function findTheTraitor(players){
-    // Your answer goes here
-};
+    for (const player of players) {
+     const parts = player.split('T');
+     if (parts.length === 2 && player.indexOf('T')> 0 && player.indexOf('T') < player.length - 1 ) {
+           return player;
+     }
+    }
+   
+   throw new Error('No traitor found');
+   
+   };
+
+
 
 
 
