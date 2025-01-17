@@ -1,26 +1,29 @@
-//MVP 1
+
 // Faithful, you need to find the traitor in your midst. 
 
-// There is a list of names in an array for you to choose from 
+// There is a list of names in an array for you to choose from.
 
-// select the person's name from the array 
+// Select the person's name from the array. Your only clue is that they have a hidden capital T in the middle of their name.
 
-// MVP 2   
 
-// The traitor has a capitol T in the middle of their name
+// An Example would be:   
+// const players = [ 'davidL', 'monika', 'madTdy']
 
-// And it throws an error if it doesn't 
+// Would have the answer of 'madTdy'
+
+// If you have already banished all of the traitors, throw the error 'No traitor found' .
+
+// Happy hunting!
 
 
 export function findTheTraitor(players){
-  for (const player of players) {
-    const parts = player.split('T');
-    if (parts.length === 2 && player.indexOf('T')> 0 && player.indexOf('T') < player.length - 1 ) {
-      return player;
-    }
-  }
-  throw new Error('No traitor found');
+
 };
+
+
+
+
+
 
 
 

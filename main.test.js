@@ -37,7 +37,7 @@ test("Selects player with a 'T' in the middle", () => {
 
 
 
-test("Every player is faithful", () => {
+test("No traitors are left", () => {
     const players6 = ['david', 'monika', 'maddy'];
     expect(() => findTheTraitor(players6)).toThrowError('No traitor found');
 
